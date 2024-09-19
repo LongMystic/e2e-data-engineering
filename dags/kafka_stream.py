@@ -44,7 +44,7 @@ def stream_data():
 
     # print(json.dumps(res, indent=3))
 
-    producer = KafkaProducer(bootstrap_servers='broker:9092',
+    producer = KafkaProducer(bootstrap_servers='broker:29092',
                              max_block_ms=5000)
     curr = time.time()
     while True:
