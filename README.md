@@ -1,4 +1,4 @@
-<h2>This project is based on this tutorial in Youtube: <br>https://www.youtube.com/watch?v=GqAcTrqKcrY</h2>
+<h2>This project is based on this tutorial in <br>Youtube: https://www.youtube.com/watch?v=GqAcTrqKcrY<br>Github: https://github.com/airscholar/e2e-data-engineering</h2>
 
 - This project is run successfully on Windows 10. In this OS, i've installed Spark and simulated Hadoop.
   To install Spark on Windows, follow this video: https://www.youtube.com/watch?v=FIXanNPvBXM
