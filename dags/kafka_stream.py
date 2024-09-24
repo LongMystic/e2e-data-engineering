@@ -2,10 +2,11 @@ import logging
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+import random
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2024, 9, 16, 10, 00)
+    'start_date': datetime(2024, 9, 19, 10, 00)
 }
 
 
@@ -21,6 +22,7 @@ def get_data():
 def format_data(res):
     data = {}
     location = res['location']
+    data['id'] = random.randint(a=1, b=1000000)
     data['first_name'] = res['name']['first']
     data['last_name'] = res['name']['last']
     data['gender'] = res['gender']
@@ -44,6 +46,7 @@ def stream_data():
 
     # print(json.dumps(res, indent=3))
 
+    # because this is run inside airflow container -> communicate with kafka by this ip:port
     producer = KafkaProducer(bootstrap_servers='broker:29092',
                              max_block_ms=5000)
     curr = time.time()
