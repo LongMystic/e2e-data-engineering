@@ -3,7 +3,7 @@
 - This project is run successfully on Windows 10. In this OS, i've installed Spark and simulated Hadoop.
   To install Spark on Windows, follow this video: https://www.youtube.com/watch?v=FIXanNPvBXM
 - To run this project:
-  + Step 1: Clone this project: https://github.com/LongMystic/e2e-data-engineering
+  + Step 1: Clone this project: ```git clone https://github.com/LongMystic/e2e-data-engineering```
   + Step 2: Move to this folder: ```cd e2e-data-engineering```
   + Step 3: (Optional) If you want run <i>schema-registry</i>, open <b>docker-compose.yml</b> and uncomment some relevant lines
   + Step 4: Open terminal: run ```docker compose up -d``` to start all containers
