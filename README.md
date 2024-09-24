@@ -11,3 +11,7 @@
   + Step 6: Open <b>localhost:9021</b> to access Control Center UI web. This is where you can monitor kafka topics and its messages.
   + Step 7: On terminal, run ```python spark-streams.py``` to create Cassandra keyspace, create Cassandra table, read streaming data from kafka topic and write it to Cassandra table.
   + Step 8: Open another terminal, run ```docker exec -it cassandra cqlsh -u cassandra -p cassandra localhost 9042``` to access Cassandra db. Then run ```SELECT * FROM spark_streams.created_users;``` to see data.
+- Note:
+  + On step 8, to run it successfully, you may have to change some code inside <b>spark_streams.py</b> :
+    + Change value of key "spark.jars.packages" to appropriate spark version and scala version
+    + If error relevant to "python" occur, you may have to run command ```export PYSPARK_PYTHON=/path/to/python```
