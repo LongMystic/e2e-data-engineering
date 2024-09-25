@@ -15,3 +15,5 @@
   + On step 8, to run it successfully, you may have to change some code inside <b>spark_streams.py</b> :
     + Change value of key "spark.jars.packages" to appropriate spark version and scala version
     + If error relevant to "python" occur, you may have to run command ```export PYSPARK_PYTHON=/path/to/python```
+### you may want to execute this command
+- spark-submit --master spark://localhost:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1,com.datastax.spark:spark-cassandra-connector_2.12:3.5.1 spark_stream.py
